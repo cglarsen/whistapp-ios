@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Seasons View Controller-->
+        <scene sceneID="i0m-iF-p80">
+            <objects>
+                <viewController storyboardIdentifier="SeasonsViewController" id="F2H-rH-Lsj" customClass="SeasonsViewController" customModule="WhistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ev-QE-M02">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Liv-LH-9ld">
+                                <rect key="frame" x="290" y="34" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createSeasonPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="FDc-69-6gB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENg-Xy-Lpm">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikN-pH-xXu">
+                                <rect key="frame" x="166.5" y="352" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ikN-pH-xXu" firstAttribute="centerX" secondItem="ENg-Xy-Lpm" secondAttribute="centerX" id="KKI-TF-Eog"/>
+                            <constraint firstItem="Liv-LH-9ld" firstAttribute="top" secondItem="Fhz-5B-qaF" secondAttribute="top" constant="34" id="eni-E0-gxH"/>
+                            <constraint firstItem="ENg-Xy-Lpm" firstAttribute="centerX" secondItem="Fhz-5B-qaF" secondAttribute="centerX" id="fP5-XD-4QW"/>
+                            <constraint firstItem="ENg-Xy-Lpm" firstAttribute="centerY" secondItem="Fhz-5B-qaF" secondAttribute="centerY" id="spM-N0-FKb"/>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="trailing" secondItem="Liv-LH-9ld" secondAttribute="trailing" constant="39" id="yQA-Xf-mO5"/>
+                            <constraint firstItem="ikN-pH-xXu" firstAttribute="top" secondItem="ENg-Xy-Lpm" secondAttribute="bottom" constant="8" id="zBW-eE-DcT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="ENg-Xy-Lpm" id="Y34-2f-Mwc"/>
+                        <outlet property="yearLabel" destination="ikN-pH-xXu" id="LLt-co-eDp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyU-Lz-LgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="147"/>
+        </scene>
+    </scenes>
+</document>
