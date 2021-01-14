@@ -51,9 +51,14 @@ extension ParseRepository: SeasonRepository {
             if let error = error {
                 // Log details of the failure
                 print(error.localizedDescription)
-            } else if let objects = objects as? [Season] {
+                completion(.init(result: .failure(error)))
+            } else if let pfSeasons = objects as? [PFSeason] {
                 // The find succeeded.
-                print("Successfully retrieved \(objects.count) scores.")
+                print("Successfully retrieved \(pfSeasons.count) seasons!")
+                let seasons = pfSeasons.map { (pfSeason) -> Season in
+                        return Season(parse: pfSeason)
+                }
+                completion(.init(result: .success(seasons)))
             }
         }
     }
@@ -69,6 +74,26 @@ extension ParseRepository: SeasonRepository {
     func updateSeason(_ season: Season, completion: @escaping (Response<Season>) -> Void) {
         
     }
-    
-    
+}
+
+extension ParseRepository: MatchRepository {
+    func getMatches(for seasonId: String, completion: @escaping (Response<[Match]>) -> Void) {
+        let query = PFMatch.query()
+        query?.whereKey("season", equalTo: PFObject(withoutDataWithClassName: "Season", objectId: seasonId))
+        
+        query?.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+                completion(.init(result: .failure(error)))
+            } else if let pfMatches = objects as? [PFMatch] {
+                // The find succeeded.
+                print("Successfully retrieved \(pfMatches.count) matches for seasonId: \(seasonId)!")
+                let matches = pfMatches.map { (pfMatch) -> Match in
+                        return Match(parse: pfMatch)
+                }
+                completion(.init(result: .success(matches)))
+            }
+        }
+    }
 }

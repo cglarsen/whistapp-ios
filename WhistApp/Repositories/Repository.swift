@@ -15,3 +15,7 @@ protocol SeasonRepository {
     func updateSeason(_ season: Season, completion: @escaping (Response<Season>) -> Void)
     func createSeason(name: String, year: Int, completion: @escaping (Response<Season>) -> Void)
 }
+
+protocol MatchRepository {
+    func getMatches(for seasonId: String, completion: @escaping (Response<[Match]>) -> Void)
+}

@@ -12,6 +12,7 @@
 import UIKit
 
 @objc protocol SeasonsRoutingLogic {
+    func seasonCellSelected(index: Int)
 }
 
 protocol SeasonsDataPassing {
@@ -24,5 +25,18 @@ class SeasonsRouter: NSObject, SeasonsDataPassing {
 }
 
 extension SeasonsRouter: SeasonsRoutingLogic {
+    func seasonCellSelected(index: Int) {
+        guard let season = dataStore?.seasons[safe: index] else { return }
+        let matchesVC = MatchesViewController.instantiate()
+        if var dataStore = matchesVC.router?.dataStore {
+            passDataToMatches(season: season, destination: &dataStore)
+        }
+        viewController?.navigationController?.pushViewController(matchesVC, animated: true)
+    }
+    
+    // MARK: Passing data
+    private func passDataToMatches(season: Season, destination: inout MatchesDataStore) {
+        destination.season = season
+    }
     
 }

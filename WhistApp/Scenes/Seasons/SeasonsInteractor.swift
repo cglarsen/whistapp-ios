@@ -17,10 +17,12 @@ protocol SeasonsBusinessLogic {
 }
 
 protocol SeasonsDataStore {
-    //var name: String { get set }
+    var seasons: [Season] { get set }
 }
 
 class SeasonsInteractor: SeasonsDataStore {
+    var seasons: [Season] = []
+    
     var presenter: SeasonsPresentationLogic?
     var worker: SeasonsWorker?
     
@@ -45,6 +47,7 @@ extension SeasonsInteractor: SeasonsBusinessLogic {
         worker?.getSeasons(completion: { (response) in
             switch response.result {
             case .success(let seasons):
+                self.seasons = seasons
                 self.presenter?.presentSeasons(response: seasons)
             case .failure(let error):
                 print("GetSeasons error in SeasonsInteractor: \(error)")

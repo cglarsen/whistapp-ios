@@ -19,12 +19,20 @@ protocol SeasonsDisplayLogic: class {
 class SeasonsViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var seasonsTableView: UITableView! {
+        didSet {
+            seasonsTableView.dataSource = self
+            seasonsTableView.delegate = self
+            seasonsTableView.register(UINib(nibName: "SeasonCell", bundle: nil), forCellReuseIdentifier: "SeasonCell")
+            seasonsTableView.separatorStyle = .none
+            seasonsTableView.backgroundColor = .clear
+        }
+    }
     
     // MARK: - Properties
     var interactor: SeasonsBusinessLogic?
     var router: (NSObjectProtocol & SeasonsRoutingLogic & SeasonsDataPassing)?
+    var seasons: [Seasons.DisplayData.Season] = []
     
     // MARK: - Init
     class func instantiate() -> SeasonsViewController {
@@ -52,6 +60,7 @@ class SeasonsViewController: UIViewController {
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         interactor?.viewCreated(request: .init())
     }
     
@@ -64,18 +73,44 @@ class SeasonsViewController: UIViewController {
     
     // MARK: - Misc
     private func setupView() {
-        self.navigationItem.title = "Seasons"
+        self.title = "Seasons"
     }
 }
 
 // MARK: - SeasonsDisplayLogic
 extension SeasonsViewController: SeasonsDisplayLogic {
     func displayNewSeason(viewModel: Seasons.DisplayData.Season) {
-        nameLabel.text = viewModel.name
-        yearLabel.text = "\(viewModel.year)"
+        
     }
     
     func displaySeasons(viewModel: [Seasons.DisplayData.Season]) {
-        print(viewModel)
+        seasons = viewModel
+        seasonsTableView.reloadData()
     }
 }
+
+// MARK: - UITableViewDelegate
+extension SeasonsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.seasonCellSelected(index: indexPath.row)
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension SeasonsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return seasons.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = UITableViewCell()
+        if let seasonCell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath) as? SeasonCell,
+           let season = seasons[safe: indexPath.row] {
+           seasonCell.setup(viewModel: season)
+            seasonCell.selectionStyle = .none
+            cell = seasonCell
+        }
+        return cell
+    }
+}
+
