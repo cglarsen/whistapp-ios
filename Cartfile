@@ -1,2 +1,3 @@
 # 3rd party
 github "parse-community/ParseLiveQuery-iOS-OSX"
+github "SnapKit/SnapKit"

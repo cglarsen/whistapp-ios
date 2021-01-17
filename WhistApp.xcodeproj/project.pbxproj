@@ -51,6 +51,22 @@
 		33B6E32D257EC7B700EF0CC4 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B6E328257EC7B700EF0CC4 /* Starscream.framework */; };
 		33B6E32F257EC7DA00EF0CC4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B6E32E257EC7DA00EF0CC4 /* AudioToolbox.framework */; };
 		33B6E333257EC82400EF0CC4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B6E332257EC82400EF0CC4 /* SystemConfiguration.framework */; };
+		33C3B2BC25B4CDCC00F8735B /* MatchGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2B525B4CDCC00F8735B /* MatchGamesPresenter.swift */; };
+		33C3B2BD25B4CDCC00F8735B /* MatchGamesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2B625B4CDCC00F8735B /* MatchGamesWorker.swift */; };
+		33C3B2BE25B4CDCC00F8735B /* MatchGamesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2B725B4CDCC00F8735B /* MatchGamesRouter.swift */; };
+		33C3B2BF25B4CDCC00F8735B /* MatchGamesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C3B2B825B4CDCC00F8735B /* MatchGamesViewController.storyboard */; };
+		33C3B2C025B4CDCC00F8735B /* MatchGamesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2B925B4CDCC00F8735B /* MatchGamesModels.swift */; };
+		33C3B2C125B4CDCC00F8735B /* MatchGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2BA25B4CDCC00F8735B /* MatchGamesViewController.swift */; };
+		33C3B2C225B4CDCC00F8735B /* MatchGamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2BB25B4CDCC00F8735B /* MatchGamesInteractor.swift */; };
+		33C3B2CA25B4D0E500F8735B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C3B2C925B4D0E500F8735B /* SnapKit.framework */; };
+		33C3B2E125B4D62600F8735B /* AddGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2DA25B4D62600F8735B /* AddGamePresenter.swift */; };
+		33C3B2E225B4D62600F8735B /* AddGameWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2DB25B4D62600F8735B /* AddGameWorker.swift */; };
+		33C3B2E325B4D62600F8735B /* AddGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2DC25B4D62600F8735B /* AddGameRouter.swift */; };
+		33C3B2E425B4D62600F8735B /* AddGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C3B2DD25B4D62600F8735B /* AddGameViewController.storyboard */; };
+		33C3B2E525B4D62600F8735B /* AddGameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2DE25B4D62600F8735B /* AddGameModels.swift */; };
+		33C3B2E625B4D62600F8735B /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2DF25B4D62600F8735B /* AddGameViewController.swift */; };
+		33C3B2E725B4D62600F8735B /* AddGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2E025B4D62600F8735B /* AddGameInteractor.swift */; };
+		33C3B2F325B4D76F00F8735B /* AddGamePlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B2F225B4D76F00F8735B /* AddGamePlayerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +139,22 @@
 		33B6E330257EC7F900EF0CC4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		33B6E331257EC81700EF0CC4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		33B6E332257EC82400EF0CC4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		33C3B2B525B4CDCC00F8735B /* MatchGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGamesPresenter.swift; sourceTree = "<group>"; };
+		33C3B2B625B4CDCC00F8735B /* MatchGamesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGamesWorker.swift; sourceTree = "<group>"; };
+		33C3B2B725B4CDCC00F8735B /* MatchGamesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGamesRouter.swift; sourceTree = "<group>"; };
+		33C3B2B825B4CDCC00F8735B /* MatchGamesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchGamesViewController.storyboard; sourceTree = "<group>"; };
+		33C3B2B925B4CDCC00F8735B /* MatchGamesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGamesModels.swift; sourceTree = "<group>"; };
+		33C3B2BA25B4CDCC00F8735B /* MatchGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGamesViewController.swift; sourceTree = "<group>"; };
+		33C3B2BB25B4CDCC00F8735B /* MatchGamesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGamesInteractor.swift; sourceTree = "<group>"; };
+		33C3B2C925B4D0E500F8735B /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		33C3B2DA25B4D62600F8735B /* AddGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGamePresenter.swift; sourceTree = "<group>"; };
+		33C3B2DB25B4D62600F8735B /* AddGameWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameWorker.swift; sourceTree = "<group>"; };
+		33C3B2DC25B4D62600F8735B /* AddGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameRouter.swift; sourceTree = "<group>"; };
+		33C3B2DD25B4D62600F8735B /* AddGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddGameViewController.storyboard; sourceTree = "<group>"; };
+		33C3B2DE25B4D62600F8735B /* AddGameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameModels.swift; sourceTree = "<group>"; };
+		33C3B2DF25B4D62600F8735B /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
+		33C3B2E025B4D62600F8735B /* AddGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameInteractor.swift; sourceTree = "<group>"; };
+		33C3B2F225B4D76F00F8735B /* AddGamePlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGamePlayerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +169,7 @@
 				33B6E32D257EC7B700EF0CC4 /* Starscream.framework in Frameworks */,
 				33B6E32C257EC7B700EF0CC4 /* Bolts.framework in Frameworks */,
 				33B6E32F257EC7DA00EF0CC4 /* AudioToolbox.framework in Frameworks */,
+				33C3B2CA25B4D0E500F8735B /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +298,8 @@
 		33B6E2FC257EB0E500EF0CC4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				33C3B2D925B4D61000F8735B /* AddGame */,
+				33C3B2B425B4CD9900F8735B /* MatchGames */,
 				339645A125B0994E0054ED7F /* Matches */,
 				33B6E300257EB1A700EF0CC4 /* Seasons */,
 				33B6E2FF257EB16000EF0CC4 /* Launch */,
@@ -338,6 +373,7 @@
 		33B6E323257EC75C00EF0CC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33C3B2C925B4D0E500F8735B /* SnapKit.framework */,
 				33B6E331257EC81700EF0CC4 /* libsqlite3.tbd */,
 				33B6E330257EC7F900EF0CC4 /* libc++.tbd */,
 				33B6E332257EC82400EF0CC4 /* SystemConfiguration.framework */,
@@ -349,6 +385,43 @@
 				33B6E328257EC7B700EF0CC4 /* Starscream.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33C3B2B425B4CD9900F8735B /* MatchGames */ = {
+			isa = PBXGroup;
+			children = (
+				33C3B2B725B4CDCC00F8735B /* MatchGamesRouter.swift */,
+				33C3B2B625B4CDCC00F8735B /* MatchGamesWorker.swift */,
+				33C3B2B525B4CDCC00F8735B /* MatchGamesPresenter.swift */,
+				33C3B2B925B4CDCC00F8735B /* MatchGamesModels.swift */,
+				33C3B2BB25B4CDCC00F8735B /* MatchGamesInteractor.swift */,
+				33C3B2BA25B4CDCC00F8735B /* MatchGamesViewController.swift */,
+				33C3B2B825B4CDCC00F8735B /* MatchGamesViewController.storyboard */,
+			);
+			path = MatchGames;
+			sourceTree = "<group>";
+		};
+		33C3B2D925B4D61000F8735B /* AddGame */ = {
+			isa = PBXGroup;
+			children = (
+				33C3B2F125B4D74F00F8735B /* Views */,
+				33C3B2DC25B4D62600F8735B /* AddGameRouter.swift */,
+				33C3B2DB25B4D62600F8735B /* AddGameWorker.swift */,
+				33C3B2DA25B4D62600F8735B /* AddGamePresenter.swift */,
+				33C3B2DE25B4D62600F8735B /* AddGameModels.swift */,
+				33C3B2E025B4D62600F8735B /* AddGameInteractor.swift */,
+				33C3B2DF25B4D62600F8735B /* AddGameViewController.swift */,
+				33C3B2DD25B4D62600F8735B /* AddGameViewController.storyboard */,
+			);
+			path = AddGame;
+			sourceTree = "<group>";
+		};
+		33C3B2F125B4D74F00F8735B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33C3B2F225B4D76F00F8735B /* AddGamePlayerCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +531,8 @@
 			files = (
 				336B697025A39EFE0059E867 /* SeasonCell.xib in Resources */,
 				33B6E2D7257EB08600EF0CC4 /* LaunchScreen.storyboard in Resources */,
+				33C3B2E425B4D62600F8735B /* AddGameViewController.storyboard in Resources */,
+				33C3B2BF25B4CDCC00F8735B /* MatchGamesViewController.storyboard in Resources */,
 				339645AC25B0998B0054ED7F /* MatchesViewController.storyboard in Resources */,
 				339645C025B09A6A0054ED7F /* MatchCell.xib in Resources */,
 				33B6E30B257EB1F200EF0CC4 /* SeasonsViewController.storyboard in Resources */,
@@ -495,6 +570,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Parse.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BoltsSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			name = "Fix carthage";
 			outputFileListPaths = (
@@ -512,17 +588,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C3B2F325B4D76F00F8735B /* AddGamePlayerCell.swift in Sources */,
+				33C3B2E625B4D62600F8735B /* AddGameViewController.swift in Sources */,
 				33B6E309257EB1F200EF0CC4 /* SeasonsWorker.swift in Sources */,
 				33B6E322257EC6B100EF0CC4 /* Constants.swift in Sources */,
+				33C3B2BD25B4CDCC00F8735B /* MatchGamesWorker.swift in Sources */,
 				33B6E319257EC45A00EF0CC4 /* Result.swift in Sources */,
 				339645AF25B0998B0054ED7F /* MatchesInteractor.swift in Sources */,
 				33B6E30E257EB1F200EF0CC4 /* SeasonsInteractor.swift in Sources */,
+				33C3B2E325B4D62600F8735B /* AddGameRouter.swift in Sources */,
 				339645BF25B09A6A0054ED7F /* MatchCell.swift in Sources */,
 				339645AB25B0998B0054ED7F /* MatchesRouter.swift in Sources */,
 				33B6E312257EB28E00EF0CC4 /* Coordinator.swift in Sources */,
 				33B6E30D257EB1F200EF0CC4 /* SeasonsViewController.swift in Sources */,
 				33B6E30A257EB1F200EF0CC4 /* SeasonsRouter.swift in Sources */,
 				3396459D25B08EA80054ED7F /* Extensions.swift in Sources */,
+				33C3B2E125B4D62600F8735B /* AddGamePresenter.swift in Sources */,
+				33C3B2E525B4D62600F8735B /* AddGameModels.swift in Sources */,
+				33C3B2BE25B4CDCC00F8735B /* MatchGamesRouter.swift in Sources */,
 				339645C825B0CB4B0054ED7F /* Match.swift in Sources */,
 				33B6E31B257EC47900EF0CC4 /* Response.swift in Sources */,
 				33B6E314257EBF8800EF0CC4 /* Season.swift in Sources */,
@@ -534,12 +617,18 @@
 				336B696F25A39EFD0059E867 /* SeasonCell.swift in Sources */,
 				33B6E30C257EB1F200EF0CC4 /* SeasonsModels.swift in Sources */,
 				33B6E308257EB1F200EF0CC4 /* SeasonsPresenter.swift in Sources */,
+				33C3B2E225B4D62600F8735B /* AddGameWorker.swift in Sources */,
+				33C3B2C025B4CDCC00F8735B /* MatchGamesModels.swift in Sources */,
 				339645AE25B0998B0054ED7F /* MatchesViewController.swift in Sources */,
 				33B6E310257EB26500EF0CC4 /* AppCoordinator.swift in Sources */,
+				33C3B2BC25B4CDCC00F8735B /* MatchGamesPresenter.swift in Sources */,
+				33C3B2C225B4CDCC00F8735B /* MatchGamesInteractor.swift in Sources */,
+				33C3B2E725B4D62600F8735B /* AddGameInteractor.swift in Sources */,
 				33B6E2CB257EB08200EF0CC4 /* AppDelegate.swift in Sources */,
 				339645D225B0CD5C0054ED7F /* DateFormatters.swift in Sources */,
 				33B6E31D257EC65D00EF0CC4 /* ParseRepository.swift in Sources */,
 				33B6E2CD257EB08200EF0CC4 /* SceneDelegate.swift in Sources */,
+				33C3B2C125B4CDCC00F8735B /* MatchGamesViewController.swift in Sources */,
 				33B6E317257EC03D00EF0CC4 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

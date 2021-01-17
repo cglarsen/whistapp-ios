@@ -26,6 +26,16 @@ class MatchesRouter: NSObject, MatchesDataPassing {
 
 extension MatchesRouter: MatchesRoutingLogic {
     func matchCellSelected(index: Int) {
-        
+        guard let match = dataStore?.matches[safe: index] else { return }
+        let matchGamesVC = MatchGamesViewController.instantiate()
+        if var dataStore = matchGamesVC.router?.dataStore {
+            passDataToMatchGames(match: match, destination: &dataStore)
+        }
+        viewController?.navigationController?.pushViewController(matchGamesVC, animated: true)
+    }
+    
+    // MARK: Passing data
+    private func passDataToMatchGames(match: Match, destination: inout MatchGamesDataStore) {
+        destination.match = match
     }
 }

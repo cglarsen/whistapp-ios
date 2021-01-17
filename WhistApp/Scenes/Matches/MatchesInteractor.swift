@@ -17,10 +17,12 @@ protocol MatchesBusinessLogic {
 
 protocol MatchesDataStore {
     var season: Season? { get set }
+    var matches: [Match] { get set }
 }
 
 class MatchesInteractor: MatchesDataStore {
     var season: Season?
+    var matches: [Match] = []
     
     var presenter: MatchesPresentationLogic?
     var worker: MatchesWorker?
@@ -36,6 +38,7 @@ extension MatchesInteractor: MatchesBusinessLogic {
         worker?.getMatches(for: seasonId, completion: { (response) in
             switch response.result {
             case .success(let matches):
+                self.matches = matches
                 self.presenter?.presentMatches(response: matches)
             case .failure(let error):
                 print("GetMatches error in MatchesInteractor: \(error)")
